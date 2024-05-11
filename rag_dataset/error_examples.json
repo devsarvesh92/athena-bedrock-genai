@@ -1,0 +1,20 @@
+{
+    "examples": [
+        {
+            "content": {
+                "human": "Get payments initiated in april 2024.",
+                "sql": "select * from sandbox_payments.payment_fact where from_iso8601_timestamp(initiated_at) >= timestamp '2024-04-01 04:00:00' and from_iso8601_timestamp(initiated_at) >= timestamp '2024-05-01 03:59:59'",
+                "error": "This gives error INVALID_FUNCTION_ARGUMENT: Invalid format because it tries to apply from_iso8601_timestamp to empty initiated_at values",
+                "confidence": 0.9
+            }
+        },
+        {
+            "content": {
+                "human": "Get payments returned in april 2024.",
+                "sql": "select * from sandbox_payments.payment_fact where from_iso8601_timestamp(returned_at) >= timestamp '2024-04-01 04:00:00' and from_iso8601_timestamp(returned_at) >= timestamp '2024-05-01 03:59:59'",
+                "error": "This gives error INVALID_FUNCTION_ARGUMENT because it tries to apply from_iso8601_timestamp to empty returned_at values",
+                "confidence": 0.9
+            }
+        }
+    ]
+}

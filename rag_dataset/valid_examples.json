@@ -1,0 +1,18 @@
+{
+    "examples": [
+        {
+            "content": {
+                "human": "Get payments initiated in april 2024. The SQL query must have the condition `initiated_at != ''` to filter out rows where the `initiated_at` column is empty or null",
+                "sql": "select * from sandbox_payments.payment_fact where initiated_at != '' and from_iso8601_timestamp(initiated_at) >= timestamp '2024-04-01 04:00:00' and from_iso8601_timestamp(initiated_at) >= timestamp '2024-05-01 03:59:59'",
+                "confidence": 0.9
+            }
+        },
+        {
+            "content": {
+                "human": "Get payments returned in april 2024. The SQL query must have the condition `returned_at != ''` to filter out rows where the `returned_at` column is empty or null",
+                "sql": "select * from sandbox_payments.payment_fact where returned_at!='' and from_iso8601_timestamp(returned_at) >= timestamp '2024-04-01 04:00:00' and from_iso8601_timestamp(returned_at) >= timestamp '2024-05-01 03:59:59'",
+                "confidence": 0.9
+            }
+        }
+    ]
+}
