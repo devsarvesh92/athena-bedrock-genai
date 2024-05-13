@@ -1,0 +1,16 @@
+{
+    "schemas": [
+        {
+            "content": {
+                "table_schema": "CREATE TABLE sandbox_payments.payment_fact ( id STRING, pp_payment_transaction_id STRING, account_id STRING, schedule_id STRING, schedule_status STRING, schedule_type STRING, schedule_frequency STRING, scheduled_amount STRING, method_id STRING, method_name STRING, signed_settled_payment_amount DOUBLE, transacted_at TIMESTAMP, created_at TIMESTAMP, process_type STRING, payment_status STRING, amount DOUBLE, bank_account_number STRING, routing_number STRING, bank_name STRING, autopay STRING, initiated_at STRING, completed_at STRING, returned_at STRING, refunded_at STRING, settled_at STRING, returned_reason STRING, effective_returned_at STRING, updated_at TIMESTAMP, pp_transaction_id STRING, tenant STRING, report_date STRING ) PARTITION BY (tenant, report_date) CLUSTER BY (tenant, report_date);",
+                "table_name": "sandbox_payments.payment_fact"
+            }
+        },
+        {
+            "content": {
+                "table_schema": "CREATE TABLE application_dimension(application_id string COMMENT '', product_name string COMMENT '', account_id string COMMENT '', first_name string COMMENT '', last_name string COMMENT '', address_line_1 string COMMENT '', address_line_2 string COMMENT '', zip_code string COMMENT '', city string COMMENT '', state string COMMENT '', dob string COMMENT '', housing_type string COMMENT '', housing_expense double COMMENT '', income double COMMENT '', tokenized_ssn string COMMENT '', email string COMMENT '', phone_number string COMMENT '', application_status string COMMENT '', manual_review string COMMENT '', applicant_info_requested string COMMENT '', credit_score string COMMENT '', declined_reason_1 string COMMENT '', declined_reason_2 string COMMENT '', declined_reason_3 string COMMENT '', declined_reason_4 string COMMENT '', created_at timestamp COMMENT '', provisioned_at string COMMENT '', rejected_at string COMMENT '', credit_approved_at string COMMENT '', last_updated_time timestamp COMMENT '', approval_type string COMMENT '', apr double COMMENT '', mla string COMMENT '', credit_line double COMMENT '', offer_code string COMMENT '', campaign_id string COMMENT '', medium string COMMENT '', source string COMMENT '', channel string COMMENT '', approved_at string COMMENT '', ssn_last_four string COMMENT '', fraud_alert_flag string COMMENT '', business_name string COMMENT '', business_address_line_1 string COMMENT '', business_address_line_2 string COMMENT '', business_address_zip_code string COMMENT '', business_address_city string COMMENT '', business_address_state string COMMENT '', revenue double COMMENT '', tokenized_ein string COMMENT '', industry_category string COMMENT '', incorporation_year string COMMENT '', incorporation_state string COMMENT '', company_structure string COMMENT '', company_phone_number string COMMENT '', company_website string COMMENT '', program_name string COMMENT '', bin_range string COMMENT '', delinquency_probability string)",
+                "table_name": "sandbox_applications.application_dimension"
+            }
+        }
+    ]
+}

@@ -42,7 +42,7 @@ if __name__ == "__main__":
     # Load schema
     generate_and_store_embedings(
         documents=JSONLoader(
-            file_path="rag_dataset/schema.json",
+            file_path="rag_dataset/schema/schema.json",
             jq_schema=".schemas[].content",
             text_content=False,
         ).load(),
@@ -52,7 +52,7 @@ if __name__ == "__main__":
     # Load examples
     generate_and_store_embedings(
         documents=JSONLoader(
-            file_path="rag_dataset/valid_examples.json",
+            file_path="rag_dataset/examples/error_examples.json",
             jq_schema=".examples[].content",
             text_content=False,
         ).load(),
@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     generate_and_store_embedings(
         documents=JSONLoader(
-            file_path="rag_dataset/error_examples.json",
+            file_path="rag_dataset/examples/valid_examples.json",
             jq_schema=".examples[].content",
             text_content=False,
         ).load(),

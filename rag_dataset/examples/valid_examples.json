@@ -13,6 +13,13 @@
                 "sql": "select * from sandbox_payments.payment_fact where returned_at!='' and from_iso8601_timestamp(returned_at) >= timestamp '2024-04-01 04:00:00' and from_iso8601_timestamp(returned_at) >= timestamp '2024-05-01 03:59:59'",
                 "confidence": 0.9
             }
+        },
+        {
+            "content": {
+                "human": "Get applications reported in april 2024.",
+                "sql": "select * from sandbox_applications.application_dimension where report_date >='2024-04-01'",
+                "confidence": 0.9
+            }
         }
     ]
 }
