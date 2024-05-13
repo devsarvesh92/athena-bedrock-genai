@@ -10,5 +10,6 @@ This repository contains code for natural language to SQL conversion using AWS B
 - [YouTube: Using AWS Bedrock to Query a MySQL Database](https://youtu.be/wxNO3WsOtNk)
 - [YouTube: AWS Bedrock Knowledge Base Setup](https://youtu.be/FDBnyJu_Ndg)
 - [YouTube: How to Use Text to SQL Using Amazon Bedrock](https://www.youtube.com/watch?v=aOm75o2Z5-o)
+- [Alternative to langchain PGVector](https://github.com/piccolo-orm/piccolo/discussions/988)
 
 Feel free to explore these resources to understand more about AWS Bedrock and its applications for NL to SQL conversion. If you have any questions or feedback, don't hesitate to reach out!
